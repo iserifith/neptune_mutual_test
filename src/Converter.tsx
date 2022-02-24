@@ -22,12 +22,12 @@ const Converter = () => {
 
     const handleFromChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = parseFloat(e.target.value);
-        setFromCurrency(parseFloat(value.toFixed(2)));
+        setFromCurrency(value);
         setToCurrency(parseFloat((value * rate).toFixed(2)));
     };
     const handleToChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = parseFloat(e.target.value);
-        setToCurrency(parseFloat(value.toFixed(2)));
+        setToCurrency(value);
         setFromCurrency(parseFloat((value / rate).toFixed(2)));
     };
 
